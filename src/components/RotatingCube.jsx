@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, Environment, Decal } from '@react-three/drei'
 import { useInView } from 'react-intersection-observer'
@@ -8,7 +8,6 @@ import * as THREE from 'three'
 const Cube = ({ animatedScale }) => {
   const cubeRef = useRef()
 
-  // Decal textures (place SVG/PNG in `public/images/logos/`)
   const textures = {
     react: new THREE.TextureLoader().load('/images/logos/react.svg'),
     tailwind: new THREE.TextureLoader().load('/images/logos/tailwind.png'),
@@ -32,7 +31,6 @@ const Cube = ({ animatedScale }) => {
       <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial color="#0a0a0a" roughness={0.3} metalness={0.4} />
 
-      {/* 6 Faces with Decals */}
       <Decal map={textures.react} position={[0, 0, 0.501]} rotation={[0, 0, 0]} scale={0.4} />
       <Decal map={textures.tailwind} position={[0.501, 0, 0]} rotation={[0, Math.PI / 2, 0]} scale={0.4} />
       <Decal map={textures.python} position={[0, 0.501, 0]} rotation={[Math.PI / 2, 0, 0]} scale={0.4} />
@@ -60,15 +58,39 @@ const RotatingCube = () => {
     motionScale.set(inView ? 4 : 0)
   }, [inView])
 
+  // Determine if device is touch (mobile)
+  const [isTouchDevice, setIsTouchDevice] = useState(false)
+
+  useEffect(() => {
+    const checkTouch = () => setIsTouchDevice(window.matchMedia('(pointer: coarse)').matches)
+    checkTouch()
+    window.addEventListener('resize', checkTouch)
+    return () => window.removeEventListener('resize', checkTouch)
+  }, [])
+
   return (
     <div ref={ref} className="relative w-full h-screen overflow-hidden">
-      <Canvas className="absolute inset-0" camera={{ position: [0, 0, 8], fov: 45 }}>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[5, 5, 5]} intensity={1} />
-        <OrbitControls enablePan={false} enableZoom={false} />
-        <Cube animatedScale={animatedScale} />
-        <Environment preset="city" />
-      </Canvas>
+<div
+  className="absolute inset-0"
+  style={{ touchAction: 'pan-y' }} // ✅ allows vertical scroll on mobile
+>
+  <Canvas
+    className="w-full h-full"
+    camera={{ position: [0, 0, 8], fov: 45 }}
+  >
+    <ambientLight intensity={0.5} />
+    <directionalLight position={[5, 5, 5]} intensity={1} />
+
+    {/* ❌ OrbitControls removed entirely on mobile */}
+    {!isTouchDevice && (
+      <OrbitControls enablePan={false} enableZoom={false} />
+    )}
+
+    <Cube animatedScale={animatedScale} />
+    <Environment preset="city" />
+  </Canvas>
+</div>
+
 
       {/* Caption */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center text-white/80">
