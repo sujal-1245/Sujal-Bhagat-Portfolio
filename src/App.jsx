@@ -1,6 +1,6 @@
 import React from 'react'
 import Hero from './sections/Hero'
-import ShowcaseSection from './sections/ShowCaseSection'
+import ShowcaseSection from './sections/ShowcaseSection'
 import RotatingCube from './components/RotatingCube'
 import Navbar from './components/Navbar'
 import FeatureCards from './sections/FeatureCards'
