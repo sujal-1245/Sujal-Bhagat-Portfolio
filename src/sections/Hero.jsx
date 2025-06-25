@@ -92,11 +92,38 @@ const Hero = () => {
         </header>
 
         {/* Right: 3D Model */}
-        <figure>
-          <div className='hero-3d-layout mt-15'>
-            <HeroModel />
-          </div>
-        </figure>
+
+<figure>
+  <div className="hero-3d-layout mt-20  flex justify-center items-center">
+    <motion.div
+      initial={{ y: 0 }}
+      animate={{ y: [0, -10, 0] }}
+      transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+      className="group relative w-80 h-80 ml-40 rounded-[2rem] overflow-hidden bg-white/5 backdrop-blur-md shadow-[0_8px_32px_rgba(255,255,255,0.1)] border-4 border-transparent hover:shadow-[0_0_60px_rgba(255,255,255,0.2)] transition-all duration-500"
+    >
+      {/* Image */}
+      <img
+        src="/sujal bhagat.jpg"
+        alt="Sujal Bhagat"
+        className="w-full h-full object-cover rounded-[2rem] transition-transform duration-500 group-hover:scale-105"
+      />
+
+      {/* Spinning border using motion */}
+      <motion.div
+        className="absolute inset-0 rounded-[2rem] border-2 border-dashed border-white/10 pointer-events-none"
+        animate={{ rotate: 360 }}
+        transition={{ repeat: Infinity, duration: 12, ease: 'linear' }}
+      />
+
+      {/* Hover caption */}
+      <div className="absolute bottom-0 w-full text-center bg-black/30 text-white text-sm py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        Sujal Bhagat
+      </div>
+    </motion.div>
+  </div>
+</figure>
+
+
       </div>
     </section>
   )
