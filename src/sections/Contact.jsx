@@ -73,7 +73,7 @@ const Contact = () => {
             {/* 👇 Mobile photo above the form */}
             <div className=" mb-6 w-full text-center">
               <img
-                src="/public/images/sujal bhagat.jpg"
+                src="/images/sujal bhagat.jpg"
                 alt="Sujal Bhagat"
                 className="mx-auto rounded-full w-24 h-24 object-cover border-2 border-white/40 shadow-lg"
               />
