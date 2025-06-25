@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://sujal-1245.vercel.app" target="_blank">
+  <a href="https://sujal-bhagat.vercel.app" target="_blank">
     <img src="https://img.shields.io/badge/Live-Demo-00b894?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
   </a>
   <a href="https://github.com/sujal-1245/Sujal-Bhagat-Portfolio" target="_blank">
@@ -104,7 +104,7 @@ VITE_EMAILJS_PUBLIC_KEY=your_public_key
 
 I'm **Sujal Bhagat**, a full-stack developer passionate about turning ideas into visually-rich, technically-sound experiences.
 
-* 🌍 [Portfolio Website](https://sujal-1245.vercel.app)
+* 🌍 [Portfolio Website](https://sujal-bhagat.vercel.app)
 * 🧑‍💻 [GitHub](https://github.com/sujal-1245)
 * 💼 [LinkedIn](https://linkedin.com/in/sujal-bhagat-sdb1245)
 
