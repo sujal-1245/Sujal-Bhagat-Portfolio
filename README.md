@@ -25,7 +25,7 @@
 
 ![Showcase](./public/screens/showcase.jpg)
 
-### 📬 Contact Form with Auto-Reply + Custom Toasts
+### 📬 Contact Form with Auto-Reply
 
 ![Contact](./public/screens/contact.jpg)
 
