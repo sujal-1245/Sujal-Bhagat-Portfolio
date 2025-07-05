@@ -39,8 +39,6 @@ https://github.com/user-attachments/assets/e72b8e83-d91e-4bc5-a41d-fa41bbf398b4
 
 ## ✨ What Makes It Special?
 
-- 🎬 **Custom 3D Loader**: Rotating glowing cube → shatter → swirl portal → 3D reveal  
-- 🌀 **Swirl Portal Animation**: Sprite-based FX synced with cube disintegration  
 - 🖊️ **Text Reveal**: Line-by-line Hero text animation (Framer Motion)  
 - 📽️ **Showcase Slider**: Single-slide, auto-scroll, image/video hover crossfade  
 - 💌 **Contact Form**: EmailJS + Auto-reply + Glassy toast confirmation  
