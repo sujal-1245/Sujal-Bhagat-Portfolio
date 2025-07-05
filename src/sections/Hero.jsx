@@ -97,6 +97,7 @@ const Hero = () => {
               <motion.a
                 custom={5}
                 variants={lineVariant}
+                id="button"
                 initial="hidden"
                 animate="visible"
                 href="/Sujal Bhagat Resume (Updated).pdf"
