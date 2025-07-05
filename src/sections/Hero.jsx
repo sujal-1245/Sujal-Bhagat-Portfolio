@@ -1,13 +1,12 @@
 import React from "react";
 import { words } from "../constants";
 import Button from "../components/Button";
-import HeroModel from "../components/HeroModels/HeroModel";
 import { motion } from "framer-motion";
 
-// Motion-enhanced version of your custom button
+
 const MotionButton = motion(Button);
 
-// Animation variant for each line
+
 const lineVariant = {
   hidden: { opacity: 0, y: 30 },
   visible: (i) => ({
@@ -38,7 +37,7 @@ const Hero = () => {
             animate="visible"
           >
             <div className="hero-text">
-              {/* Line 0: Personalized animated heading */}
+              {/* Personalized animated heading */}
               <motion.h1 custom={0} variants={lineVariant}>
                 Turning
                 <span className="slide">
@@ -62,7 +61,7 @@ const Hero = () => {
                 </span>
               </motion.h1>
 
-              {/* Line 1 & 2: Follow-up personalized lines */}
+              
               <motion.h1 custom={1} variants={lineVariant}>
                 into Interactive
               </motion.h1>
@@ -71,7 +70,7 @@ const Hero = () => {
               </motion.h1>
             </div>
 
-            {/* Line 3: Description */}
+            {/*  Description */}
             <motion.p
               custom={3}
               variants={lineVariant}
@@ -82,7 +81,7 @@ const Hero = () => {
               into sleek, responsive, and high-performing websites.
             </motion.p>
 
-            {/* Line 4: Animated CTA Button */}
+            {/* Animated CTA Button */}
             <div className="flex flex-col md:flex-row gap-4">
               <MotionButton
                 custom={4}
@@ -92,9 +91,7 @@ const Hero = () => {
                 text="See my Work"
                 initial="hidden"
                 animate="visible"
-                onClick={() => {
-                  // For example: scroll to work section
-                }}
+                
               />
 
               <MotionButton
@@ -118,7 +115,7 @@ const Hero = () => {
           </motion.div>
         </header>
 
-        {/* Right: 3D Model */}
+        {/* Right: Hero Image */}
 
         <figure>
           <div className="hero-3d-layout mt-20  flex justify-center items-center">

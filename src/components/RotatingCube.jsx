@@ -58,7 +58,7 @@ const RotatingCube = () => {
     motionScale.set(inView ? 4 : 0)
   }, [inView])
 
-  // Determine if device is touch (mobile)
+
   const [isTouchDevice, setIsTouchDevice] = useState(false)
 
   useEffect(() => {
@@ -72,7 +72,7 @@ const RotatingCube = () => {
     <div ref={ref} className="relative w-full h-screen overflow-hidden">
 <div
   className="absolute inset-0"
-  style={{ touchAction: 'pan-y' }} // ✅ allows vertical scroll on mobile
+  style={{ touchAction: 'pan-y' }} 
 >
   <Canvas
     className="w-full h-full"
@@ -81,7 +81,7 @@ const RotatingCube = () => {
     <ambientLight intensity={0.5} />
     <directionalLight position={[5, 5, 5]} intensity={1} />
 
-    {/* ❌ OrbitControls removed entirely on mobile */}
+
     {!isTouchDevice && (
       <OrbitControls enablePan={false} enableZoom={false} />
     )}

@@ -40,18 +40,16 @@ const TechStack = () => {
               key={techStackIcon.name}
               className="tech-card relative w-[180px] h-[300px] rounded-full overflow-hidden group bg-gradient-to-br from-white/10 via-white/5 to-white/10 dark:from-white/10 dark:via-white/5 dark:to-white/10 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] border border-white/20 transition-transform duration-300 hover:scale-105"
             >
-              {/* Optional animated streak light overlay */}
+
               <div className="absolute inset-0 pointer-events-none before:absolute before:top-0 before:left-[-100%] before:w-[200%] before:h-full before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:rotate-12 before:animate-shine z-0" />
 
-              {/* Tech card content */}
               <div className="relative z-10 w-full h-full flex flex-col items-center justify-start pt-6">
-                
-                {/* Glass sphere container */}
+
                 <div className="relative w-[140px] h-[140px] rounded-full bg-white/10 backdrop-blur-md shadow-inner flex items-center justify-center mb-4 border border-white/20 overflow-hidden">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/30 via-white/10 to-transparent opacity-30 pointer-events-none" />
                   <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-white/20 to-transparent blur-sm opacity-20 pointer-events-none rotate-[25deg]" />
                   
-                  {/* Actual 3D model inside sphere */}
+                  {/* 3D model inside sphere */}
                   <TechIconCardExperience model={techStackIcon} />
                 </div>
 
@@ -64,7 +62,6 @@ const TechStack = () => {
         </div>
       </div>
 
-      {/* SHINE animation keyframes */}
       <style>
         {`
           @keyframes shine {

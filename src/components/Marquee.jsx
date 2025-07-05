@@ -18,12 +18,10 @@ export default function Marquee({
     const container = containerRef.current;
     if (!wrapper || !container) return;
 
-    // ✅ Set correct starting position
     gsap.set(wrapper, {
       x: reverse ? "0%" : "-50%",
     });
 
-    // ✅ Animate in correct direction
     tweenRef.current = gsap.to(wrapper, {
       x: reverse ? "-50%" : "0%",
       duration: speed,
@@ -31,7 +29,6 @@ export default function Marquee({
       repeat: -1,
     });
 
-    // ✅ Pause on hover (optional)
     const pause = () => tweenRef.current?.pause();
     const play = () => tweenRef.current?.play();
 
@@ -55,7 +52,7 @@ export default function Marquee({
       className={twMerge("relative overflow-hidden w-full py-2", className)}
     >
       <div ref={wrapperRef} className="flex gap-4 w-max">
-        {/* ✅ Two identical sets to enable looping */}
+        
         <div className="flex gap-4 marquee-set">{children}</div>
         <div className="flex gap-4 marquee-set">{children}</div>
       </div>

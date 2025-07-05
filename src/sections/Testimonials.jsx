@@ -3,9 +3,7 @@ import Marquee from "../components/Marquee";
 import TitleHeader from "../components/TitleHeader";
 import { reviews } from "../constants";
 
-// Optional: split into rows if needed
-// const firstRow = reviews.slice(0, reviews.length / 2);
-// const secondRow = reviews.slice(reviews.length / 2);
+
 
 const ReviewCard = ({ img, name, username, body }) => {
   return (
@@ -60,7 +58,7 @@ export default function Testimonial() {
             ))}
           </Marquee>
 
-          {/* Gradient Fades (Edge Shadows) */}
+          {/* Gradient Fades  */}
           <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#0f172a] to-transparent rounded-4xl" />
           <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#0f172a] to-transparent rounded-4xl" />
         </div>

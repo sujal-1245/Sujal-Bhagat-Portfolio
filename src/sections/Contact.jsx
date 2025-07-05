@@ -70,7 +70,7 @@ const Contact = () => {
 
 
           <div className="xl:col-span-5">
-            {/* 👇 Mobile photo above the form */}
+            {/* photo above the form */}
             <div className=" mb-6 w-full text-center">
               <img
                 src="/images/sujal bhagat.jpg"
