@@ -17,9 +17,9 @@
 
 ## 🖼️ Preview
 
-### 🔥 Hero Section (Animated 3D Entry)
+### 🔥 Hero Section 
 
-![Hero](./public/screens/hero.jpg)
+![image](https://github.com/user-attachments/assets/44981d8f-d142-4995-a882-c80f6fa9fdb8)
 
 ### 💼 Project Showcase (Auto-scroll Slider)
 
