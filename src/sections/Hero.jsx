@@ -92,20 +92,28 @@ const Hero = () => {
                 text="See my Work"
                 initial="hidden"
                 animate="visible"
+                onClick={() => {
+                  // For example: scroll to work section
+                }}
               />
 
-              <motion.a
+              <MotionButton
                 custom={5}
                 variants={lineVariant}
+                className="md:w-80 md:h-16 w-60 h-12"
                 id="button"
+                text="Download Resume"
                 initial="hidden"
                 animate="visible"
-                href="/Sujal Bhagat Resume (Updated).pdf"
-                download
-                className="md:w-80 md:h-16 w-60 h-12 flex items-center justify-center rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300 shadow-lg"
-              >
-                Download Resume
-              </motion.a>
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = "/Sujal Bhagat Resume (Updated).pdf";
+                  link.download = "Sujal Bhagat Resume (Updated).pdf";
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              />
             </div>
           </motion.div>
         </header>
