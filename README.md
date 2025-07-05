@@ -31,13 +31,7 @@
 
 ### 🎥 Full Walkthrough Video
 
-
-
-
-https://github.com/user-attachments/assets/e65e5e7c-850e-4406-9628-f7403f7f98da
-
-
-
+https://github.com/user-attachments/assets/20a1189f-296e-4d9f-a524-a2beabddf5fd
 
 ---
 
